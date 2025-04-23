@@ -4,19 +4,30 @@ body{
     background-repeat:repeat;
     background-size:contain;
 }
-
-video{
-    display: block;
-    margin: auto;
-}
-
-img,video{
+img{
     width:100%;
     object-fit: cover;
     border-top-left-radius:5%;
     border-top-right-radius:5%;
-    height:75%;
+    height:400px;
 }
+img,video{
+    object-fit: cover;
+    width:100%;
+}
+
+video{
+    display: block;
+    margin: auto;
+    border-radius: 5%;
+}
+
+#logo{
+    width: 180px;
+    height:180px;
+    border-radius:50%;
+}
+
 
 img:hover{
     object-fit: contain;
@@ -44,7 +55,7 @@ h2{
 
 
 *{
-    font-family: cursive;
+    font-family:'Courier New', Courier, monospace;
     color: rgb(255, 255, 255);
 }
 
@@ -55,16 +66,21 @@ header{
 .container > div {
     background-color: rgba(0, 0, 0, 0.732);
     border-radius: 5%;
+    height:fit-content;
+    width:100%;
 }
-.Label, .tag{
-    height: 25%;
-    display: inline;
+.Label{
+    height: fit-content;
+    display:inline-block;
     font-size: 1.6rem;
     padding:10px;
+    float: left;
+    /* width: ; */
     /* background-color: red; */
 }
 .tag{
     float: right;
+    display:inline-block;
     color: green;
     font-size: 1.5rem;
     padding:10px;
@@ -79,10 +95,12 @@ header{
     margin:4%;
     display:grid;
     gap:5px;
-    grid-auto-rows:minmax(100px,300px);
+    grid-auto-rows: max-content;
+
+    
 }
 
-@media (min-width:550px) {
+@media (min-width:650px) {
     .container{
         grid-template-columns:1fr 1fr;
         
@@ -91,6 +109,7 @@ header{
 
 @media (min-width:900px) {
     .container{
-        grid-template-columns:1fr 1fr 1fr;
+        grid-template-columns:1fr 1fr 1fr;;
     }
 }
+
