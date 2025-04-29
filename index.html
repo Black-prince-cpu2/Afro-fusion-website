@@ -19,7 +19,7 @@
         <h2>The soul of our culture in every taste.</h2>
 
    </header>
-
+<!-- Hero video -->
    <section>
         <video width="100%"muted autoplay loop>
             <source src="Resources/Hero-video/Nigerian party jollof rice hero video.mp4" type="video/mp4">
@@ -28,6 +28,7 @@
         </video>
    </section>
 
+<!-- Menu -->
    <section class="container">
     <div>
         <img src="Resources/Images/suya.jpg" alt="Suya">
@@ -73,6 +74,63 @@
         </label>
         <p>Home jollof</p>
    </footer>
+
+<!-- Button to reservation open modal -->
+ <a href="#reservation-modal" class="opn-button" id="reservation-btn"> Book a reservation</a>
+
+<!-- Reservation modal -->
+ <div id="reservation-modal" class="modal">
+    <div class="modal-content">
+        <a href="#reservation-btn" class="close-bot">&times;</a>
+         <h2>Reserve a Table</h2>
+        <form>
+            <label for="Name">Name</label>
+            <input type="text" id="Name" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+      
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" required>
+
+            <button type="submit">Book Now</button>
+        </form>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+ <!-- Ai solution. -->
+
+  <!-- Button to Open Modal -->
+<!-- <a href="#reservation-modal" class="open-btn">Make a Reservation</a> -->
+
+<!-- Modal Structure -->
+<!-- <div id="reservation-modal" class="modal">
+  <div class="modal-content">
+    <a href="#" class="close-btn">&times;</a>
+    <h2>Reserve a Table</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="date">Date:</label>
+      <input type="date" id="date" required>
+
+      <label for="guests">Number of Guests:</label>
+      <input type="number" id="guests" required>
+
+      <button type="submit">Book Now</button>
+    </form>
+  </div>
+</div> -->
+
+
 
 </body>
 
