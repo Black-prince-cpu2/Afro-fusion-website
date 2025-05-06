@@ -93,7 +93,8 @@ header{
 
 
 .container{
-    margin:8%;
+    margin:5%;
+    margin-bottom:0;
     display:grid;
     gap:5px;
     grid-auto-rows: max-content;
@@ -147,9 +148,9 @@ header{
 }
 
 .close-btn {
- position:absolute;
+ position:relative;
  top:10px;
- right:15px;
+ left:100px;
  font-size: 24px;
  color: rgb(51, 51, 51);
 }
@@ -179,37 +180,77 @@ header{
     background-color: #b0611c;
 }
 .opn-button{
-    background-color: #27ae60;
-    padding: 10px 20px;
-    color: white;
-    border-radius: 5px;
-    margin:100px;
+    display: block;
+    margin: 25px auto;
+    width: fit-content;
+    text-decoration:none;
+    background-color:#00972b;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.59);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    
+
+}
+
+.opn-button:hover{
+    background-color:#00b834;
+    transform: scale(1.05);
 }
 
 
 
+ .Currency-Toggle {
+    display: flex;
+    justify-content:center;
+    margin: 20px;
+    /* background-color: #00000065; */
+ }
 
-/*
- 
-  
-    .modal-content button {
-    background: #e67e22;
-    color: #000000;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .modal-content button:hover {
-    background: #d35400;
-  }
-  
-    .open-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #27ae60;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-  }  */
-  
-  
+.switch {
+    position: relative;
+    /* come back here */
+    display:inline-block ;
+    width:70px;
+    height: 34px;
+    /* background-color: #00972b; */
+}
+
+.switch input{
+    width: 0;
+    height: 0;
+    opacity: 0;
+    display: inline;
+}
+
+.slider {
+    position: absolute;
+    cursor:pointer;
+    background-color:#2d2d2dcd;
+    width:100%;
+    height: 100%;
+    border-radius:34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 10px;
+    font-weight: bold;
+    font-size: 20px;
+    transition: background-color 0.3s;
+}
+
+.symbol{
+    color: #ffffff;
+    transition: opacity 0.3s ease;
+}
+
+input:checked +  .slider .naira {
+    opacity:0.3;
+}
+input:not(:checked) + .slider .dollar{
+    opacity: 0.3;
+}
